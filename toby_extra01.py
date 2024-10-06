@@ -7,7 +7,6 @@ def numgamewnewnum():
     guesses = 0
     global invalids
     invalids = 0
-    exit()
     numgame()
 def numgame():
     global userguess
@@ -18,11 +17,11 @@ def numgame():
     userguessi = int(userguess)
     if guesses == 10:
         pagainl = input("uh oh, no more guesses left. do you want to play again? y/n ?")
-        if pagainl == "y" or "Y":
-            numgamewnewnum()
-        else: 
+        if pagainl == "n" or "N":
             exit()
-            #i know its not that graceful to just close everything if one declines to play.         
+        elif pagainl == "y" or "Y":
+            numgamewnewnum()
+            #i know its not that graceful to just close everything if one declines to play  again but what else coulkd i do? also i was to lazy to really acount for not yes no answers.         
     if userguessi < 1000 and userguessi > 1:
         Answer()
     else:
@@ -47,10 +46,10 @@ def Answer():
     if userguessi == secretnum:
         print("DING DING DING weeeee Haaaaavvvvee a wiiiinnnnerrr!!!!!!!!")
         pagainw = input("anyways do you want to play again y/n ?")
-        if pagainw == "y" or "Y":
-            numgamewnewnum()
-        else: 
-            exit()
+    if pagainw == "n" or "N":
+        exit()
+    elif pagainw == "y" or "Y":
+        numgamewnewnum()
 numgamewnewnum()
 
 
