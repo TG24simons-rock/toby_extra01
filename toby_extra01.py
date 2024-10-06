@@ -22,7 +22,7 @@ def numgame():
             numgamewnewnum()
         else: 
             exit()
-            #i know its not that graceful to just close everything if one declines to play  again but what else coulkd i do? also i was to lazy to really acount for not yes no answers.         
+            #i know its not that graceful to just close everything if one declines to play.         
     if userguessi < 1000 and userguessi > 1:
         Answer()
     else:
